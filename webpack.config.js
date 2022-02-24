@@ -19,7 +19,11 @@ module.exports = {
         test: /\.css$/i,
         //Indicates which loader should be used to do the transforming
         use: ['style-loader','css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       }
-    ]
-  }
+    ],
+  },
 };
