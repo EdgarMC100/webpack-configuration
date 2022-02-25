@@ -1,4 +1,13 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./assets/fonts/Shizuru/Shizuru-Regular.ttf') ;
+  font-weight: 600;
+  font-style: normal;
+}
+
 .hello {
-  color:red;
+  color:#1c78c0;
+  padding-left: 40px;
+  font-family: 'MyFont';
   background: url('./assets/images/site-logo.1fcab817090e78435061.svg') no-repeat;
 }
