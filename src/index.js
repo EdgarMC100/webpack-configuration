@@ -3,10 +3,11 @@ import './styles.css'
 import WebpackImage from './assets/images/site-logo.1fcab817090e78435061.svg'
 //This fucking way is possible but I didn't find the solution yet.
 // import Styles from 'style-loader!css-loader?modules!./styles.css';
-import data from './data'
+import Data from './data/example.json'
+
 
 function component() {
-  console.log(data)
+  console.log(Data,1)
   const element = document.createElement('div');
 
  // Lodash, now imported by this script
