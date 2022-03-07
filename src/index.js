@@ -5,8 +5,18 @@ import './styles.css'
 // import Styles from 'style-loader!css-loader?modules!./styles.css';
 import DataJson from './data/example.json'
 import Notes from './data.csv'
+import toml from './data.toml'
+import yaml from './data.yaml'
+import json from './data.json5'
 
+console.log(toml.title);
+console.log(toml.owner.name); // output `Tom Preston-Werner`
 
+console.log(yaml.title); // output `YAML Example`
+console.log(yaml.owner.name); // output `Tom Preston-Werner`
+
+console.log(json.title); // output `JSON5 Example`
+console.log(json.owner.name); // output `Tom Preston-Werner`
 
 function component() {
   console.log(DataJson,1)
