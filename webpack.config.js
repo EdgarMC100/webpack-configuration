@@ -3,15 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = {
+  mode: 'development',
   //indicates which module webpack should use to begin building out its internal dependency graph
   //Webpack will figure out which other modules and libraries that entry point depends on (directly and indirectly).
   entry: {
     main: './src/index.js',
     print: './src/print.js'
   },
+  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
+      title: 'Development environment',
     }),
     new WebpackManifestPlugin()
   ],
