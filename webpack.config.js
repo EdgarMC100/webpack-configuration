@@ -20,6 +20,7 @@ module.exports = {
         return asset.includes('ignored/dir');
       },
     },
+    publicPath: '/'
   },
   devtool: 'inline-source-map',
   devServer: {
