@@ -8,20 +8,27 @@ module.exports = {
   //Webpack will figure out which other modules and libraries that entry point depends on (directly and indirectly).
   entry: {
     main: './src/index.js',
-    print: './src/print.js'
+  },
+
+  //Tells webpack where to emit the bundles it creates and how to name these files.
+  //It defaults to ./ dist / main.js for the main output file and to the ./ dist folder for any other generated file.
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: {
+      keep(asset) {
+        return asset.includes('ignored/dir');
+      },
+    },
   },
   devtool: 'inline-source-map',
+  devServer: {
+    static: './dist',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development environment',
     }),
     new WebpackManifestPlugin()
   ],
-  //Tells webpack where to emit the bundles it creates and how to name these files.
-  //It defaults to ./ dist / main.js for the main output file and to the ./ dist folder for any other generated file.
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname,'dist'),
-    clean: true,
-  },
 };
