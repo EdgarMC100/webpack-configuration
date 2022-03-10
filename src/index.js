@@ -13,3 +13,21 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+
+//This is useful when the page is not reloaded,
+//the only bad thing is the old changes are visibles in the view
+module.hot.accept((err) => {
+  console.log("reloading self");
+  window.location.reload();
+})
+
+// if (import.meta.webpackHot) {
+//   import.meta.webpackHot.accept();
+// }
+// if (module.hot) {
+//   module.hot.accept('./print.js', function () {
+//     console.log('Accepting the updated printMe module!');
+//     printMe();
+//   })
+// }
