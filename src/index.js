@@ -16,6 +16,7 @@ document.body.appendChild(component());
 
 
 //This is useful when the page is not reloaded,
+//https://github.com/webpack-contrib/webpack-hot-middleware/issues/293
 //the only bad thing is the old changes are visibles in the view
 module.hot.accept((err) => {
   console.log("reloading self");
