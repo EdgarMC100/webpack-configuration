@@ -9,6 +9,7 @@ module.exports = {
   //Webpack will figure out which other modules and libraries that entry point depends on (directly and indirectly).
   entry: {
     main: './src/index.js',
+    another: './src/another-module.js'
     // Runtime code for hot module replacement
     // hot:'webpack/hot/dev-server.js',
     // client: 'webpack-dev-server/client/index.js?hot=true&live-reload=true',
