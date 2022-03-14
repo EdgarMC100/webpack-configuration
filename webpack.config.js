@@ -8,22 +8,26 @@ module.exports = {
   //indicates which module webpack should use to begin building out its internal dependency graph
   //Webpack will figure out which other modules and libraries that entry point depends on (directly and indirectly).
   entry: {
-    main: {
-      import: './src/index.js',
-      dependOn: 'lodash'
-    },
-    another: {
-      import: './src/another-module.js',
-      dependOn: 'lodash'
-    },
-    component1:{
-      import: './src/component-1.js',
-    },
-    component2: {
-      import: './src/component-2.js',
-    },
-    //With this shared dependence we can have less code in just one chunk
-    lodash: 'lodash',
+    main: './src/index.js',
+    another: './src/another-module.js',
+    component1: './src/component-1.js',
+    component2: './src/component-2.js'
+    // main: {
+    //   import: './src/index.js',
+    //   dependOn: 'lodash'
+    // },
+    // another: {
+    //   import: './src/another-module.js',
+    //   dependOn: 'lodash'
+    // },
+    // component1:{
+    //   import: './src/component-1.js',
+    // },
+    // component2: {
+    //   import: './src/component-2.js',
+    // },
+    // //With this shared dependence we can have less code in just one chunk
+    // lodash: 'lodash',
     //Runtime code for hot module replacement
     // hot:'webpack/hot/dev-server.js',
     // client: 'webpack-dev-server/client/index.js?hot=true&live-reload=true',
@@ -57,7 +61,7 @@ module.exports = {
   ],
   optimization:{
     splitChunks: {
-      //extract  shared depedemcies from entry bundles:
+    //   //extract  shared depedemcies from entry bundles:
       chunks: 'all',
     },
   //This is used to have a same instance of objects
